@@ -1,17 +1,17 @@
 <?php
-// Replace this email address with your receiving email address
+
 $receiving_email_address = 'thabisongubanee@gmail.com';
 
-// Check if the form is submitted
+// Checking if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = strip_tags(trim($_POST["name"])); // Clean and retrieve form data
+    $name = strip_tags(trim($_POST["name"]));
     $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
     $subject = trim($_POST["subject"]);
     $message = trim($_POST["message"]);
 
     // Validate form fields
     if (empty($name) || empty($subject) || empty($message) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        // If validation fails
+        /
         echo "Please fill in all fields correctly.";
         exit;
     }

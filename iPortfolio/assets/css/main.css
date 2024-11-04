@@ -157,12 +157,13 @@ h6 {
   border-right: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
-.header .profile-img img {
-  margin: 15px auto;
+header .profile-img img {
+  margin: 15px auto 15px -10px; /* Adjust the left margin (last value) as needed to move the image left or right */
   display: block;
   width: 120px;
   border: 8px solid color-mix(in srgb, var(--default-color), transparent 85%);
 }
+
 
 .header .logo {
   line-height: 1;
